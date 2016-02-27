@@ -17,9 +17,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/mnakada/HA1HomeBridge.git"
+    "url": "git+https://github.com/mnakada/HA1HomeBridge.git"
   },
   "author": "Mitsuru Nakada",
   "license": "Apache-2.0",
-  "homepage": "https://flying-engineer.blogspot.jp"
+  "homepage": "https://flying-engineer.blogspot.jp",
+  "bugs": {
+    "url": "https://github.com/mnakada/HA1HomeBridge/issues"
+  }
 }
