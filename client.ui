@@ -1,0 +1,226 @@
+{
+  "ItemList": [
+    { "room": "system", "type": "onOff", "label": "冷暖房自動運転", "siriName": ["冷暖房自動運転", "冷暖房の自動運転"], "status": [{"label": "タイマー運転", "sensor": "autodrive_stat"}], "buttons": [ {"label": "on", "command": "autodrive_on"}, {"label": "off", "command": "autodrive_off"}]},
+    { "room": "all", "type": "lock", "label": "玄関", "siriName": ["玄関"], "status": [{"label": "玄関錠", "sensor": "entrance_key_stat"}], "buttons": [ {"label": "open", "command": "entrance_key_open"}, {"label": "close", "command": "entrance_key_close"}]},
+    { "room": "living", "type": "windowCovering", "label": "南側窓ブラインド",  "siriName": ["ブラインド", "南側の窓のブラインド", "南側のブラインド"], "buttons": [ {"label": "open", "command": "brind_open"}, {"label": "close", "command": "brind_close"}]},
+    { "room": "living", "type": "window", "label": "南側窓",  "siriName": ["南側の窓", "南の窓", "南側", "南"], "status": [{"type": "option", "label": "リビング南側窓センサー", "sensor": "south_window_sensor"}, {"sensor": "south_window_stat"}], "buttons": [ {"label": "open", "command": "south_window_open"}, {"label" : "close", "command": "south_window_close"}]},
+    { "room": "living", "type": "window", "label": "北側窓", "siriName": ["北側の窓", "北川の窓", "北の窓", "北側", "北川", "北"], "status": [{"type": "option", "label": "リビング北側窓センサー", "sensor": "north_window_sensor"}, {"sensor": "north_window_stat"}], "buttons": [ {"label": "open", "command": "north_window_open"}, {"label": "close", "command": "north_window_close"}]},
+    { "room": "bedroom", "type": "windowCovering", "label": "シャッター", "siriName": ["寝室のシャッター"], "status": [{"sensor": "east_shutter_stat"}], "buttons": [ {"label": "open", "command": "east_shutter_open"}, {"label": "close", "command": "east_shutter_close"}]},
+    { "room": "studyroom", "type": "windowCovering", "label": "掃出窓シャッター", "siriName": ["掃出窓のシャッター", "中央のシャッター", "真ん中のシャッター"], "status": [{"sensor": "center_shutter_stat"}], "buttons": [ {"label": "open", "command": "center_shutter_open"}, {"label":"close", "command": "center_shutter_close"}]},
+    { "room": "studyroom", "type": "windowCovering", "label": "腰高窓シャッター", "siriName": ["腰高窓のシャッター", "西側のシャッター"], "status": [{"sensor": "west_shutter_stat"}], "buttons": [ {"label": "open", "command": "west_shutter_open"}, {"label": "close", "command": "west_shutter_close"}]},
+    { "room": "living", "type": "onOff", "label": "西側床暖房", "siriName": ["西側の床暖", "リビングの床暖"], "status": [{"sensor": "living_floor_heater_stat"}], "buttons": [ {"label": "on", "command": "living_floor_heater_on"}, {"label": "off", "command": "living_floor_heater_off"}]},
+    { "room": "living", "type": "onOff", "label": "東側床暖房", "siriName": ["東側の床暖", "ダイニングの床暖"], "status": [{"sensor": "dining_floor_heater_stat"}], "buttons": [ {"label": "on", "command": "dining_floor_heater_on"}, {"label": "off", "command": "dining_floor_heater_off"}]},
+    { "room": "bathroom", "type": "onOff", "label": "風呂給湯", "siriName": ["風呂のお湯"], "status": [{"sensor": "bathroom_stat"}], "buttons": [ {"label": "on", "command": "bathroom_on"}, {"label": "off", "command": "bathroom_off"}]},
+    { "room": "living", "type": "aircon", "table": "AirconListR", "label": "南エアコン", "siriName": ["南のエアコン", "南側のエアコン"], "status": [{"type": "temp", "sensor": "south_aircon_temp"}, {"sensor": "south_aircon_stat"}], "commandPrefix": "south_aircon_", "buttons": [{"label": "off", "command": "off"}]},
+    { "room": "living", "type": "aircon", "table": "AirconList", "label": "西エアコン", "siriName": ["西のエアコン", "西側のエアコン", "西川のエアコン"], "status": [{"type": "temp", "sensor": "west_aircon_temp"}, {"sensor": "west_aircon_stat"}], "commandPrefix": "west_aircon_", "buttons": [{"label": "off", "command": "off"}]},
+    { "room": "studyroom", "type": "aircon", "table": "AirconList", "label": "エアコン", "siriName": ["書斎のエアコン"], "status": [{"type": "temp", "sensor": "studyroom_aircon_temp"}, {"sensor": "studyroom_aircon_stat"}], "commandPrefix": "studyroom_aircon_", "buttons": [{"label": "off", "command": "off"}]},
+    { "room": "bedroom", "type": "aircon", "table": "AirconList", "label": "エアコン", "siriName": ["寝室のエアコン"], "status": [{"type": "temp", "sensor": "bedroom_aircon_temp"}, {"sensor": "bedroom_aircon_stat"}], "commandPrefix": "bedroom_aircon_", "buttons": [{"label": "off", "command": "off"}]},
+    { "room": "living", "type": "tv", "table": "TVChCommandList", "label": "ＴＶ", "siriName": ["テレビ"], "commandPrefix": "", "buttons": [{"label": "on", "command": "tv_on"}, {"label": "off", "command": "tv_off"}, {"label": "vol+", "command": "tv_vup"}, {"label": "vol-", "command": "tv_vdn"}]},
+    { "room": "living", "type": "onOff", "label": "テーブルスポット照明", "siriName": ["テーブルスポット照明", "テーブルの照明", "テーブル照明"], "buttons": [{"label":"on/off", "command": "avrack_light4"}]},
+    { "room": "living", "type": "onOff", "label": "リビングスポット照明", "siriName": ["リビングスポット照明", "リビング照明", "リビングの照明", "スポット照明"], "buttons": [{"label":"on/off", "command": "avrack_light5"}]},
+    { "room": "living", "type": "onOff", "label": "間接照明", "siriName": ["間接照明"], "buttons": [ {"label": "on", "command": "avrack_light2_on"}, {"label": "off", "command": "avrack_light2_off"}]},
+    { "room": "living", "type": "onOff", "label": "ダウンライト", "siriName": ["ダウンライト"], "buttons": [ {"label": "on", "command": "avrack_light3_on"}, {"label": "off", "command": "avrack_light3_off"}]},
+    { "room": "living", "type": "onOff", "label": "カウンター照明", "siriName": ["カウンター照明"], "buttons": [ {"label": "on", "command": "avrack_light1_on"}, {"label": "off", "command": "avrack_light1_off"}]},
+    { "room": "kitchen", "type": "onOff", "label": "レンジフード照明", "siriName": ["レンジフード照明"], "buttons": [{"label":"on/off", "command": "avrack_rangehood_light"}]},
+    { "room": "kitchen", "label": "レンジフード", "buttons": [ {"label": "止", "command": "avrack_rangehood_stop"}, {"label": "弱", "command": "avrack_rangehood_low"}, {"label": "中", "command": "avrack_rangehood_mid"}, {"label": "強", "command": "avrack_rangehood_high"}]},
+    { "room": "living", "label": "スイッチボックス", "status": [{"sensor": "swbox_sw1"}, {"sensor": "swbox_sw2"}]},
+    { "room": "all", "label": "室内1F/2F", "status": [{"label": "室内1F温度", "type": "temp", "sensor": "internal_1f_temp"}, {"label": "室内2F温度", "type": "temp", "sensor": "internal_2f_temp"}]},
+    { "room": "all", "label": "屋外南/北", "status": [{"label": "屋外南温度", "type": "temp", "sensor": "external_south_temp"}, {"label": "屋外北温度", "siriName":["外の気温", "外気温", "屋外の気温"],"type": "temp", "sensor": "external_north_temp"}]},
+    { "room": "living", "label": "リビング", "status": [{"label": "リビング温度", "siriName":["リビングの温度", "二階の温度"], "type": "temp", "sensor": "avrack_temp"}, {"label": "リビング湿度", "siriName": ["リビングの湿度"], "type": "humidity", "sensor": "avrack_humidity"}]},
+    { "room": "bedroom", "label": "ベッドサイド", "status": [{"label": "ベッドサイド温度", "siriName":["寝室の温度", "一階の温度", "一介"], "type": "temp", "sensor": "bedroom_temp"}, {"label": "ベッドサイド湿度", "siriName":["寝室の湿度"], "type": "humidity", "sensor": "bedroom_humidity"}]},
+    { "room": "all", "label": "車バッテリー", "status": [{"label": "車バッテリー", "siriName":["車のバッテリー"], "type": "battery", "sensor": "car_battery"}]},
+    { "room": "all", "label": "降雨/アメッシュ", "status": [{"label": "降雨センサー", "type": "rain", "sensor": "external_rain"}, {"label": "アメッシュ", "type": "rain", "sensor": "rain_info"}]}
+  ],
+  "AirconList": [
+    { "label": "auto", "color": "#404040",
+      "command": [
+        { "label": "auto", "commandSuffix": "auto" }
+      ]},
+    { "label": "cooler", "color": "#2586d9", "min":18, "max":30, "commandSuffix": "cooler_"},
+    { "label": "heater", "color": "#d93625",  "min":18, "max":29, "commandSuffix": "heater_"}
+  ],
+  "AirconListR": [
+    { "label": "auto", "color": "#404040",
+      "command": [
+        { "label": "auto", "commandSuffix": "auto" }
+      ]},
+    { "label": "cooler", "color": "#2586d9", "min":18, "max":30, "commandSuffix": "cooler_"},
+    { "label": "heater", "color": "#d93625", "min":18, "max":29, "commandSuffix": "heater_r_"}],
+  "TVChCommandList": [
+    { "label": "ＮＨＫ−Ｇ", "siriName": ["NHKG", "NHK", "NHK総合"], "commandSuffix": "tv_1" },
+    { "label": "ＮＨＫ−Ｅ", "siriName": ["NHKE", "Eテレ", "NHK教育"], "commandSuffix": "tv_2" },
+    { "label": "日テレ", "siriName": ["日テレ", "日本テレビ"], "commandSuffix": "tv_4" },
+    { "label": "テレビ朝日", "siriName": ["テレビ朝日", "テレ朝"], "commandSuffix": "tv_5" },
+    { "label": "ＴＢＳ", "siriName": ["TBS"], "commandSuffix": "tv_6" },
+    { "label": "テレビ東京", "siriName": ["テレビ東京", "テレ東"], "commandSuffix": "tv_7" },
+    { "label": "フジテレビ", "siriName": ["フジテレビ"], "commandSuffix": "tv_8" },
+    { "label": "TOKYO MX", "siriName" : ["東京MX"], "commandSuffix": "tv_9" },
+    { "label": "放送大学", "siriName": ["放送大学"], "commandSuffix": "tv_12" }
+  ],
+  "Status": [
+    {
+      "status": "server",
+      "value": "alive"
+    },
+    {
+      "status": "entrance_key_stat",
+      "value": "Close",
+      "type": "openClose"
+    },
+    {
+      "status": "south_window_stat",
+      "value": "Close",
+      "type": "swStat"
+    },
+    {
+      "status": "south_window_sensor",
+      "value": "Close",
+      "type": "openClose"
+    },
+    {
+      "status": "north_window_stat",
+      "value": "Close",
+      "type": "swStat"
+    },
+    {
+      "status": "north_window_sensor",
+      "value": "Close",
+      "type": "openClose"
+    },
+    {
+      "status": "east_shutter_stat",
+      "value": "Open",
+      "type": "swStat"
+    },
+    {
+      "status": "center_shutter_stat",
+      "value": "Open",
+      "type": "swStat"
+    },
+    {
+      "status": "west_shutter_stat",
+      "value": "Open",
+      "type": "swStat"
+    },
+    {
+      "status": "living_floor_heater_stat",
+      "value": "Off",
+      "type": "onOff"
+    },
+    {
+      "status": "dining_floor_heater_stat",
+      "value": "Off",
+      "type": "onOff"
+    },
+    {
+      "status": "bathroom_stat",
+      "value": "Off",
+      "type": "onOff"
+    },
+    {
+      "status": "south_aircon_stat",
+      "value": "On",
+      "type": "onOff"
+    },
+    {
+      "status": "west_aircon_stat",
+      "value": "On",
+      "type": "onOff"
+    },
+    {
+      "status": "studyroom_aircon_stat",
+      "value": "Off",
+      "type": "onOff"
+    },
+    {
+      "status": "bedroom_aircon_stat",
+      "value": "Off",
+      "type": "onOff"
+    },
+    {
+      "status": "swbox_sw1",
+      "value": "On",
+      "type": "onOff"
+    },
+    {
+      "status": "swbox_sw2",
+      "value": "Off",
+      "type": "onOff"
+    },
+    {
+      "status": "south_aircon_temp",
+      "value": "15.4",
+      "type": "temp"
+    },
+    {
+      "status": "west_aircon_temp",
+      "value": "20.3",
+      "type": "temp"
+    },
+    {
+      "status": "studyroom_aircon_temp",
+      "value": "8.8",
+      "type": "temp"
+    },
+    {
+      "status": "bedroom_aircon_temp",
+      "value": "6.9",
+      "type": "temp"
+    },
+    {
+      "status": "internal_2f_temp",
+      "value": "14.2",
+      "type": "temp"
+    },
+    {
+      "status": "internal_1f_temp",
+      "value": "7.5",
+      "type": "temp"
+    },
+    {
+      "status": "external_south_temp",
+      "value": "7.7",
+      "type": "temp"
+    },
+    {
+      "status": "external_north_temp",
+      "value": "6.0",
+      "type": "temp"
+    },
+    {
+      "status": "avrack_temp",
+      "value": "15.8",
+      "type": "temp"
+    },
+    {
+      "status": "avrack_humidity",
+      "value": "28",
+      "type": "humidity"
+    },
+    {
+      "status": "bedroom_temp",
+      "value": "12.1",
+      "type": "temp"
+    },
+    {
+      "status": "bedroom_humidity",
+      "value": "59",
+      "type": "humidity"
+    },
+    {
+      "status": "external_rain",
+      "value": "0",
+      "type": "rain"
+    },
+    {
+      "status": "autodrive_stat",
+      "value": "On",
+      "type": "onOff"
+    },
+    {
+      "status": "rain_info",
+      "value": "0",
+      "type": "rain"
+    }
+  ]
+}

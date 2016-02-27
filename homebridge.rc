@@ -1,0 +1,64 @@
+#!/bin/sh
+
+### BEGIN INIT INFO
+# Provides:          homebridge
+# Required-Start:    $network $syslog
+# Required-Stop:     $network $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: forever running homebridge
+### END INIT INFO
+
+if [ -e /var/ha1/node.ver ]; then
+  . /var/ha1/node.ver
+  rm -f /usr/local/node
+  ln -s /usr/local/node-${NODEVER}-linux-`uname -m` /usr/local/node
+fi;
+
+USER=ha1homebridge
+CONFIGFILE=/var/ha1/HomeBridge/config.json
+PIDFILE=/var/run/homebridge.pid
+LOGFILE=/var/ha1/homebridge.log
+PATH=/usr/local/node/bin:$PATH
+FOREVER=/usr/local/node/bin/forever
+NODEAPP=/var/ha1/HomeBridge/ha1homebridge.js
+
+start() {
+  $FOREVER start --pidFile $PIDFILE -l $LOGFILE -a $NODEAPP -u $USER -c $CONFIGFILE
+  RETVAL=$?
+}
+
+restart() {
+  $FOREVER restart $NODEAPP
+  RETVAL=$?
+}
+
+stop() {
+  $FOREVER stop $NODEAPP
+  RETVAL=$?
+}
+
+status() {
+  $FOREVER list
+  RETVAL=$?
+}
+
+case "$1" in
+  start)
+    start
+    ;;
+  stop)
+    stop
+    ;;
+  status)
+    status
+    ;;
+  restart)
+    restart
+    ;;
+  *)
+    echo "Usage:  {start|stop|status|restart}" >&2
+    exit 1
+    ;;
+esac
+exit $RETVAL

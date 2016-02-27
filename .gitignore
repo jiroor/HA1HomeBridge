@@ -1,0 +1,13 @@
+# hidden/temp files
+.DS_Store
+*.swp
+*~.nib
+node_modules/
+persist/
+.npm
+
+# Xcode project files except for the project file
+*.xcodeproj/project.xcworkspace/
+*.xcodeproj/xcuserdata/
+
+

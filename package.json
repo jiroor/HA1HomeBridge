@@ -1,0 +1,25 @@
+{
+  "name": "ha1homebridge",
+  "version": "0.1.0",
+  "description": "HomeBridge for HA1Control",
+  "main": "ha1homebridge.js",
+  "dependencies": {
+    "hap-nodejs": "0.2.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "HomeControl",
+    "HA1Control",
+    "HAP-nodeJS"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mnakada/HA1HomeBridge.git"
+  },
+  "author": "Mitsuru Nakada",
+  "license": "Apache-2.0",
+  "homepage": "https://flying-engineer.blogspot.jp"
+}

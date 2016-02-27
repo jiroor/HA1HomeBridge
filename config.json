@@ -1,0 +1,16 @@
+{
+    "bridge": {
+        "name": "HA1HomeBridge",
+        "username": "B8:27:EB:83:E4:30",
+        "port": 51826,
+        "pin": "031-45-155"
+    },
+    "platform": {
+        "name": "ha1control",
+        "serverPort": 47900,
+        "manufacturer": "cipher facrtory",
+        "model": "ha1server",
+        "serial": "00000000",
+        "demoMode": true
+    }
+}
