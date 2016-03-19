@@ -8,8 +8,8 @@ all:
 	node ha1homebridge
 
 install:
-	[ "`uname -s`" != "Linux" -o \( "`uname -m`" != "armv7l" -a "`uname -m`" != "armv6l" \) ] && exit 1
-	- /etc/init.d/homebridge stop
+	if [ "`uname -s`" != "Linux" -o \( "`uname -m`" != "armv7l" -a "`uname -m`" != "armv6l" \) ] ; then exit 1; fi
+	- [ ! -f /etc/init.d/homebridge ] || /etc/init.d/homebridge stop
 	- useradd -d /var/ha1/HomeBridge -c "for home control homebridge" -r -s /usr/sbin/nologin ha1homebridge
 	[ -d /usr/local/node-${NODEVER}-linux-armv6l ] || curl http://nodejs.org/dist/${NODEVER}/node-${NODEVER}-linux-armv6l.tar.gz | tar zxf - -C /usr/local
 	[ -d /usr/local/node-${NODEVER}-linux-armv7l ] || curl http://nodejs.org/dist/${NODEVER}/node-${NODEVER}-linux-armv7l.tar.gz | tar zxf - -C /usr/local
