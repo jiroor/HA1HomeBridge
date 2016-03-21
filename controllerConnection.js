@@ -30,10 +30,13 @@ class controllerConnection {
 
       this.Client.on('data', (data) => {
         if(this.ConnectState == 1) {
-          if(data.search("format json : OK") >= 0) {
+          const p = data.search("format json : OK");
+          if(p >= 0) {
             this.ConnectState = 2;
+            data = data.substr(p + 17);
+          } else {
+            return;
           }
-          return;
         }
         if(this.ConnectState == 2) {
           const strs = data.split('\0');
