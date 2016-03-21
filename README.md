@@ -1,1 +1,2 @@
-# HA1HomeBridge
+ha1controlのREADME.mdを参照してください
+
