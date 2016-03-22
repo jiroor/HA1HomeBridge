@@ -1,6 +1,6 @@
 #
 
-NODEVER=v4.3.1
+NODEVER=v4.4.0
 
 all:
 	echo "HA1HomeBridge"
