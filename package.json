@@ -4,7 +4,7 @@
   "description": "HomeBridge for HA1Control",
   "main": "ha1homebridge.js",
   "dependencies": {
-    "hap-nodejs": "0.2.5"
+    "hap-nodejs": "0.2.8"
   },
   "devDependencies": {},
   "scripts": {

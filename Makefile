@@ -19,7 +19,7 @@ install:
 	echo "NODEVER=${NODEVER}" > /var/ha1/node.ver
 	mkdir -p /var/ha1/HomeBridge
 	cp *.js package.json client.ui /var/ha1/HomeBridge
-	cp config_ha1server.json /var/ha1/HomeBridge/config.json
+	[ -f /var/ha1/HomeBridge/config.json ] || cp config_ha1server.json /var/ha1/HomeBridge/config.json
 	chown -R ha1homebridge:ha1homebridge /var/ha1/HomeBridge
 	(PATH=/usr/local/node/bin:${PATH}; npm ls -g forever || npm install -g forever)
 	cp homebridge.rc /etc/init.d/homebridge
